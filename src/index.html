@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../src//assets/images/favicon-32x32.png">
+  <link href="../output.css" rel="stylesheet" />
+  <!-- assing fonts from src/assets -->
+  <!-- <link rel="stylesheet" href="../src/assets/fonts"> -->
+  <script>
+    window.onload = () => {
+      const hamburger = document.getElementById("hamburger");
+      const closeMenu = document.getElementById("closeMenu");
+      const sideMenu = document.getElementById("sideMenuMoblie");
+  
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.add("hidden");
+        closeMenu.classList.remove("hidden");
+        sideMenu.classList.remove("hidden"); // show the side menu
+      });
+  
+      closeMenu.addEventListener("click", () => {
+        hamburger.classList.remove("hidden");
+        closeMenu.classList.add("hidden");
+        sideMenu.classList.add("hidden"); // hide the side menu
+      });
+    }
+  </script>
+  
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="ssm:bg-white bg-white">
+  <!-- main container -->
+  <div id="main-Container" class="ssm:flex ssm:flex-col ssm:p-3 mmin:pl-52 mmin:pr-[250px] ">
+    
+    <nav class="ssm:flex ssm:flex-row ssm:justify-between ssm:items-center mmin:pt-[100px] mmin:flex mmin:justify-between mmin:pb-10">
+      <h2 class="ssm:text-black mmin:flex">W.</h2>
+    
+      <div id="sideMenuMoblie" class="hidden z-10 ssm:flex-col ssm:w-4/6 ssm:h-screen ssm:bg-white ssm:fixed ssm:right-0 ssm:top-0 ssm:overflow-auto mmin:static mmin:flex-row mmin:w-auto mmin:h-auto mmin:ml-5">
+          <ul class="flex flex-col relative top-[154px] gap-5 pl-5 mmin:flex-row mmin:space-x-4 mmin:top-auto mmin:pl-0">
+              <li class="text-xl font-semibold ">Home</li>
+              <li class="text-xl font-semibold">New</li>
+              <li class="text-xl font-semibold">Popular</li>
+              <li class="text-xl font-semibold">Trending</li>
+              <li class="text-xl font-semibold">Categories</li>
+          </ul>
+      </div>
+  
+      <div id="sideMenuDesktop" class="ssm:hidden mmin:flex mmin:justify-end mmin:ml-auto">
+          <ul class="mmin:flex gap-5">
+              <li class="text-xl font-semi hover:text-gold hover:cursor-pointer">Home</li>
+              <li class="text-xl font-semi hover:text-gold hover:cursor-pointer">New</li>
+              <li class="text-xl font-semi hover:text-gold hover:cursor-pointer">Popular</li>
+              <li class="text-xl font-semi hover:text-gold hover:cursor-pointer">Trending</li>
+              <li class="text-xl font-semi hover:text-gold hover:cursor-pointer">Categories</li>
+          </ul>
+      </div>
+      
+      <span id="modalWindowMode" class="ssm:text-black ssm:absolute  ssm:right-3 ssm:z-10 mmin:hidden">
+          <img id="hamburger" src="./assets/images/icon-menu.svg" alt="burgerMenu" class="block">
+          <img id="closeMenu" src="./assets/images/icon-menu-close.svg" alt="closeMenu" class="hidden">
+      </span>
+  </nav>
+  
+  
+    
+    
+    
+
+
+    <!-- image -->
+    <!-- import image from src/assets/images/image-web-3-desktop.jpg and scale for correct screen resolution -->
+    <div class="mmin:grid mmin:grid-cols-3 mmin:grid-rows-2 mmin:gap-4 ">
+    <div id="imageContainer" class="ssm:h-[300px] ssm:w-full ssm:mt-3 mmin:col-span-2 mmin:row-span-1 ">
+      <img src="./assets/images/image-web-3-desktop.jpg" alt="web3" class="ssm:h-full ssm:w-full ssm:object-cover">
+    </div>
+    <h3 id="bigTextMobile" class="mmin:hidden ssm:mt-3  ">
+      <span class="ssm:block  ">The Bright</span> 
+      <span class="ssm:block  ">Future of</span> 
+      <span class="ssm:block  "><span>Web</span> <span>3.0?</span></span>
+  </h3>
+  <h3 id="bigTextDesktop" class="ssm:hidden ssm:mt-3 mmin:col-start-1 mmin:col-span-1 mmin:row-start-2 mmin:row-span-1  mmin:text-5xl mmin:h-[180px] mmin:relative mmin:top-[20px]">
+    <span >The Bright</br></span> 
+    <span >Future of</br></span> 
+    <span class="ssm:block  "><span>Web</span> <span>3.0?</span></span>
+</h3>
+<div class="
+flex flex-col justify-between items-start h-full relative
+mmin:col-start-2 mmin:col-span-1 mmin:row-start-2 mmin:row-span-1 mmin:h-[180px]
+">
+<div id="smallTest" class="ssm:mt-3 text-xl ">
+  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  But is it really fulfilling its promise?
+</div>
+<div id="buttonReadMore" class="z-0  hover:cursor-pointer
+mt-auto flex flex-row bg-tomato hover:bg-veryDarkBlue  text-white w-[180px] h-[48px] items-center justify-center gap-1 mmin:py-3
+">
+    <div class="ssm:flex">R</div>
+    <div class="ssm:flex">E</div>
+    <div class="ssm:flex">A</div>
+    <div class="ssm:flex">D</div>
+    <div class="ssm:flex"> </div>
+    <div class="ssm:flex"> </div>
+    <div class="ssm:flex">M</div>
+    <div class="ssm:flex">O</div>
+    <div class="ssm:flex">R</div>
+    <div class="ssm:flex">E</div>
+</div>
+</div>
+    <div id="newSubjects" class="ssm:mt-7 bg-veryDarkBlue py-3 px-3  mmin:col-start-3 mmin:col-span-1 mmin:row-span-2 mmin:h-[590px]">
+      <h5 id="newSubjectText" class="text-gold mmin:text-4xl">New</h5>
+      <div id="subject1" class="text-white my-5">
+        <div class="mb-3 mmin:text-2xl hover:text-gold hover:cursor-pointer">Hydrogen VS Electric Cars</div>
+        <div class="text-zinc-400 mmin:text-xl">Will hydrogen-fueled cars ever catch up to EVs?</div>
+      </div>
+      <hr style="border-color: #a1a1aa;" class="ssm:my-5 mmin:my-10"></hr>
+      <div id="subject2" class="text-white my-3">
+        <div class="mb-3 mmin:text-2xl hover:text-gold hover:cursor-pointer">The Downsides of AI Artistry</div>
+        <div class="text-zinc-400 mmin:text-xl"> What are the possible adverse effects of on-demand AI image generation?</div>
+      </div>
+      <hr style="border-color: #a1a1aa;" class="ssm:my-5 mmin:my-10"></hr>
+      <div id="subject3" class="text-white my-3">
+        <div class="mb-3 mmin:text-2xl hover:text-gold hover:cursor-pointer">  Is VC Funding Drying Up?</div>
+        <div class="text-zinc-400 mmin:text-xl">  Private funding by VC firms is down 50% YOY. We take a look at what that means.</div>
+      </div>
+    </div>
+  </div>
+  
+    <div id="reviewsContainer" class=" ssm:my-4 mmin:flex mmin:my-[-120px] mmin:pb-10 mmin:m-auto">
+      <div class="ssm:flex ssm:w-full ssm:mt-3 ssm:my-4 mmin:flex mmin:pb-[-30px]">
+        <div class="ssm:w-[106px] ssm:h-[128px] ssm:overflow-hidden">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="web3" class="ssm:absolute ssm:object-cover ssm:w-[79px] ssm:h-[128px] ">
+        </div>
+        <div class="flex-grow px-2 ssm:pl-8 mmin:pl-3">
+            <div class="text-greyNr mmin:text-3xl w-full pb-2 mmin:pb-1">01</div>
+            <h6 class="w-full pb-3 ssm:pb-[-28px] mmin:text-xl hover:text-gold hover:cursor-pointer">Reviving Retro PCs</h6>
+            <div class="w-full mmin:text-xl">What happens when old PCs are given modern upgrades?</div>
+        </div>
+      </div>
+      <div class="ssm:flex ssm:w-full ssm:mt-3 ssm:my-4 mmin:flex ">
+          <div class="ssm:w-[106px] ssm:h-[128px] ssm:overflow-hidden">
+              <img src="./assets/images/image-top-laptops.jpg" alt="web3" class="ssm:absolute ssm:object-cover ssm:w-[79px] ssm:h-[128px] ">
+          </div>
+          <div class="flex-grow px-2 ssm:pl-6 mmin:pl-3">
+              <div class="text-greyNr mmin:text-3xl mmin:w-full ssm:pb-2 mmin:pb-1 ">02</div>
+              <h6 class="w-full ssm:pb-[-28px] mmin:pb-3 mmin:text-xl hover:text-gold hover:cursor-pointer">Top 10 Laptops of 2022</h6>
+              <div class="w-full mmin:text-xl">Our best picks for various needs and budgets.</div>
+          </div>
+      </div>
+      <div class="ssm:flex ssm:w-full ssm:mt-3 ssm:my-4 mmin:flex">
+          <div class="ssm:w-[106px] ssm:h-[128px] ssm:overflow-hidden">
+              <img src="./assets/images/image-gaming-growth.jpg" alt="web3" class="ssm:absolute ssm:object-cover ssm:w-[79px] ssm:h-[128px] ">
+          </div>
+          <div class="flex-grow px-2 ssm:pl-8 mmin:pl-3">
+              <div class="text-greyNr mmin:text-3xl w-full pb-2 mmin:pb-1 ">03</div>
+              <h6 class="w-full mmin:pb-3 ssm:pb-[-28px] mmin:text-xl hover:text-gold hover:cursor-pointer">The Growth of Gaming</h6>
+              <div class="w-full mmin:text-xl">How the pandemic has sparked fresh opportunities.</div>
+          </div>
+      </div>
+  </div>
+
+  </div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
